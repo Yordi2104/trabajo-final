@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fondo de la página */
+        body {
+            background-image: url('fondo.jpg'); /* Aquí debes poner la ruta correcta de tu imagen */
+            background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Fija la imagen al hacer scroll */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #9c035c;
+        }
+
+        /* Sección de bienvenida */
+        #welcome {
+            text-align: center;
+            padding: 50px;
+        }
+
+        #welcome h1 {
+            font-size: 3em;
+        }
+
+        #welcome p {
+            font-size: 1.5em;
+        }
+
+        /* Sección de Ubicación */
+        .ubicacion {
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mejorar contraste */
+            color: rgba(247, 246, 247, 0.856);
+            text-align: center;
+        }
+
+        /* Sección de Contacto */
+        .contacto {
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mejorar contraste */
+            color: rgb(235, 234, 236);
+            text-align: center;
+        }
+
+        .contacto p {
+            font-size: 1.2em;
+        }
+
+        /* Estilo de la imagen de menú */
+        .menu-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome">
+        <img src="logo.jpeg" alt="Logo del Restaurante" class="logo">
+        <h1>Restaurante Brisas del Salto</h1>
+        <p>Disfruta de una experiencia única.</p>
+        <button onclick="showLogin()">Iniciar Sesión</button>
+    </div>
+
+    <!-- Sección de ubicación para domicilios -->
+    <div class="ubicacion">
+        <h2>Ubicación para Domicilios</h2>
+        <p>Estamos ubicados en CL 8A 2B-14, Barranco de loba, Bolivar.</p>
+        <p>Realiza tu pedido llamando al: <strong>3017204018</strong></p>
+        <p>O también puedes pedir por WhatsApp: <strong>3107487377</strong></p>
+    </div>
+
+    <!-- Sección de contacto -->
+    <div class="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, puedes comunicarte con nosotros:</p>
+        <p>IG: @brisas_delsalto</p>
+        <p>Teléfono: 3176181980</p>
+    </div>
+
+    <div id="login" style="display:none;">
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="return login(event)">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <div id="menu" style="display:none;">
+        <h2>Menú del Restaurante</h2>
+        <ul>
+            <li>
+                <img src="asados.jpeg" alt="plato 1" class="menu-image">
+                <h3>Asados</h3>
+                <p>Cerdo, pechuga, carne</p>
+                <p>Precio: $20,000</p>
+            </li>
+            <li>
+                <img src="guisados.jpeg" alt="Plato 2" class="menu-image">
+                <h3>Guisados</h3>
+                <p>Molida, carnero en coco, sobrebarriga</p>
+                <p>Precio: $15,000</p>
+            </li>
+            <li>
+                <img src="bebidas.jpeg" alt="Plato 3" class="menu-image">
+                <h3>Bebidas</h3>
+                <p>Coca-Cola 500 ml, Agua 500 ml, Sprite 500 ml</p>
+                <p>Precio: $3,000</p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
